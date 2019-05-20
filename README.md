@@ -1,2 +1,2 @@
 # chinook-JanetWoods
-![ERD](/chinookERD.pdf "ERD")
+![ERD](/chinookERD.pdf)
