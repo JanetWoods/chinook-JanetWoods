@@ -1,4 +1,4 @@
---  What are the respective total sales for each of those years?
+--  What are the respective total sales for each of those years, 2009, 2011?
 SELECT year(i.InvoiceDate) yr, SUM(L.Quantity) Sales
 from Invoice i
 JOIN InvoiceLine l ON L.InvoiceId = I.InvoiceId
