@@ -1,7 +1,12 @@
 -- 23 Which country's customers spent the most?
 
+
 SELECT TOP 1
- i.BillingCountry, sum(i.Total)
+    tot, country
+FROM
+(
+select sum(i.Total) tot, i.BillingCountry country
 from Invoice i
-GROUP BY I.BillingCountry
-ORDER BY sum(i.Total) DESC
+GROUP BY i.BillingCountry
+)tot
+order by tot desc

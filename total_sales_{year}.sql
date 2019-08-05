@@ -1,8 +1,3 @@
---  What are the respective total sales for each of those years, 2009, 2011?
-SELECT year(i.InvoiceDate) yr, SUM(L.Quantity) Sales
-from Invoice i
-JOIN InvoiceLine l ON L.InvoiceId = I.InvoiceId
-WHERE (YEAR(i.InvoiceDate)) = '2009'
-OR
-(YEAR(i.InvoiceDate)) = '2011'
-GROUP BY (YEAR(i.InvoiceDate))
+--  What are the respective total sales for each of those years?
+SELECT sum(i.Total) TotalAmount, year(i.InvoiceDate) year FROM Invoice i
+Group BY year(i.InvoiceDate)
